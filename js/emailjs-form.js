@@ -18,6 +18,14 @@ function initContactForm()
 			const submitButton = document.getElementById('contact_button');
 			const originalText = submitButton.textContent;
 			
+			// Check if EmailJS is properly initialized
+			if (typeof emailjs === 'undefined')
+			{
+				formStatus.textContent = 'EmailJS not loaded. Please check your connection.';
+				formStatus.style.color = '#dc3545';
+				return;
+			}
+			
 			// Show loading state
 			submitButton.textContent = 'Sending...';
 			submitButton.disabled = true;
@@ -30,7 +38,7 @@ function initContactForm()
 			};
 			
 			// Send email using EmailJS
-			emailjs.send('service_51pcckj', 'YOUR_TEMPLATE_ID', formData)
+			emailjs.send('service_51pcckj', 'service_osznhav', formData)
 				.then(function(response)
 				{
 					console.log('SUCCESS!', response.status, response.text);
@@ -40,7 +48,7 @@ function initContactForm()
 				}, function(error)
 				{
 					console.log('FAILED...', error);
-					formStatus.textContent = 'Oops! Something went wrong. Please try again.';
+					formStatus.textContent = 'EmailJS configuration error: Please set your Public Key and Template ID.';
 					formStatus.style.color = '#dc3545';
 				})
 				.finally(function()
@@ -49,11 +57,11 @@ function initContactForm()
 					submitButton.textContent = originalText;
 					submitButton.disabled = false;
 					
-					// Clear status message after 5 seconds
+					// Clear status message after 8 seconds
 					setTimeout(function()
 					{
 						formStatus.textContent = '';
-					}, 5000);
+					}, 8000);
 				});
 		});
 	}
