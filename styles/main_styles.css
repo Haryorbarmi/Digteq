@@ -44,11 +44,11 @@
 	--font1: "Inter", sans-serif;
 	--font2: "Doto", sans-serif;
 	--white: #ffffff;
-	--black: #1f1f1f;
-	--bg-dark: #1f1f1f;
+	--black: #2563eb;
+	--bg-dark: #2563eb;
 	--bg-light: #f5f5f5;
-	--textColor: #1f1f1f;
-	--hColor: #000000;
+	--textColor: #2563eb;
+	--hColor: #2563eb;
 }
 *
 {
