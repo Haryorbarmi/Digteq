@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TrueCare Transport Hero</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .hero {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23ffffff;stop-opacity:0.1" /><stop offset="100%" style="stop-color:%23ffffff;stop-opacity:0.05" /></linearGradient></defs><rect width="1200" height="630" fill="url(%23grad)"/><path d="M0,400 Q300,350 600,400 T1200,400 L1200,630 L0,630 Z" fill="%23ffffff" opacity="0.1"/><circle cx="100" cy="100" r="50" fill="%23ffffff" opacity="0.05"/><circle cx="1100" cy="500" r="80" fill="%23ffffff" opacity="0.05"/></svg>') no-repeat center center;
+            background-size: cover;
+            opacity: 0.3;
+        }
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 2;
+        }
+        .logo {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .tagline {
+            font-size: 24px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .feature {
+            text-align: center;
+        }
+        .feature-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .feature-text {
+            font-size: 16px;
+        }
+        .vehicle {
+            position: absolute;
+            bottom: 50px;
+            right: 100px;
+            width: 300px;
+            height: 150px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="content">
+            <div class="logo">TrueCare Transport</div>
+            <div class="tagline">All Transport That Works For You</div>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">✈️</div>
+                    <div class="feature-text">Airport Pickups</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">👥</div>
+                    <div class="feature-text">VIP Shuttles</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎓</div>
+                    <div class="feature-text">School Transport</div>
+                </div>
+            </div>
+        </div>
+        <div class="vehicle">🚐 12 Passenger Shuttle</div>
+    </div>
+</body>
+</html>
