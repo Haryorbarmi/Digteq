@@ -30,7 +30,7 @@ function initContactForm()
 			};
 			
 			// Send email using EmailJS
-			emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+			emailjs.send('service_51pcckj', 'YOUR_TEMPLATE_ID', formData)
 				.then(function(response)
 				{
 					console.log('SUCCESS!', response.status, response.text);
