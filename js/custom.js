@@ -65,7 +65,6 @@ $(document).ready(function()
 	initTestimonialsSlider();
 	initAccordion();
 	initReveal();
-	initForm();
 	initLoader();
 	initStickyWork();
 	initStickyTools();
@@ -809,22 +808,6 @@ $(document).ready(function()
 				duration: 0.7,
 				opacity: 1
 			});
-		});
-	}
-
-	/* 
-
-	18. Contact Form
-
-	*/
-
-	function initForm()
-	{
-		document.querySelector("#contact_form").addEventListener("submit", function (e)
-		{
-			e.preventDefault();
-			document.querySelector(".form-status").textContent = "Message sent successfully!";
-			document.querySelector(".form-status").classList.add("visible");
 		});
 	}
 
